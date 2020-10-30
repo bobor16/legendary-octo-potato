@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QNPal7HwcwXqs3gbm3hFdLf9ThI51Au8OrMCbTj91o7ripsR//CyKmiPVE3f/H2rS96mK3pBz8ew5FRr9TocWw==",
+  "dgSpecHash": "CJFGy/0KqBq1P9UX0oiyb2GbIPPd3KI2d3AO1leyOBhRk4ZsapwYRf+pZLGctetIEgmVDiG0G4cG10eNLRmw9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
+  "projectFilePath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

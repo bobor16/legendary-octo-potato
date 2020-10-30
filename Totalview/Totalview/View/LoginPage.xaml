@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Totalview.View_Model"
+             x:Class="Totalview.LoginPage">
+
+    <ContentPage.BindingContext>
+        <local:LoginPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Image x:Name="totalview_logo_blue.png">
+            <Image.Source>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <OnPlatform.iOS>
+                        <FileImageSource File="totalview_logo_blue.png"/>
+                    </OnPlatform.iOS>
+                    <OnPlatform.Android>
+                        <FileImageSource File="totalview_logo_blue.png"/>
+                    </OnPlatform.Android>
+                </OnPlatform>
+            </Image.Source>
+        </Image>
+
+        <Label Text="Sign in"
+               FontSize="Title"
+               VerticalTextAlignment="Center"
+               TextColor="DarkBlue"/>
+        <Label Text="User name"/>
+        <Editor Placeholder="User name"/>
+        <Label Text="Password"/>
+        <Editor Placeholder="Password"/>
+
+        <Button Text="Next"
+                Command="{Binding LoginCommand}"
+                BackgroundColor="Green"
+                TextColor="White"/>
+
+    </StackLayout>
+
+</ContentPage>

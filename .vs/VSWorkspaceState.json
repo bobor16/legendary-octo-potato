@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Totalview",
+    "\\Totalview\\Totalview",
+    "\\Totalview\\Totalview\\obj"
   ],
+  "SelectedNode": "\\Totalview\\Totalview\\obj\\Totalview.csproj.nuget.g.targets",
   "PreviewInSolutionExplorer": false
 }

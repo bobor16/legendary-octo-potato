@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj": {}
+    "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj": {
+    "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
+        "projectUniqueName": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
         "projectName": "Totalview.Android",
-        "projectPath": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
+        "projectPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
         "packagesPath": "C:\\Users\\borga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\obj\\",
+        "outputPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj": {
-                "projectPath": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj"
+              "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj": {
+                "projectPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj"
               }
             }
           }
@@ -54,14 +54,14 @@
         }
       }
     },
-    "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj": {
+    "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj",
+        "projectUniqueName": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj",
         "projectName": "Totalview",
-        "projectPath": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj",
+        "projectPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj",
         "packagesPath": "C:\\Users\\borga\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\obj\\",
+        "outputPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
