@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "DvB8dWWsvd6FpTqA8yH7uFFL8ajY3Nj1nlD/tXQRluwW2QF06zIGgkgZloM9gozIZvNT4WbZ62XZuDa2CYS6Qg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\borga\\Source\\Repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.iOS\\Totalview.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+  ],
+  "logs": []
+}
