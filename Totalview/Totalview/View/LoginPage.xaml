@@ -9,7 +9,7 @@
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <Image Source="totalview_logo_blue.png" Aspect="AspectFit"/>
+        <Image Source="totalview_logo_blue.png" HeightRequest="25" />
 
         <!--<Image x:Name="totalview_logo_blue.png" VerticalOptions="Center">
             <Image.Source>
