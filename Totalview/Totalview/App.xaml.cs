@@ -8,7 +8,9 @@ namespace Totalview
         {
             InitializeComponent();
 
-            MainPage = new LoginPage();
+            //MainPage = new NavigationPage(new LoginPage());
+            MainPage = new TabbedPage(new LoginPage());
+
         }
 
         protected override void OnStart()
