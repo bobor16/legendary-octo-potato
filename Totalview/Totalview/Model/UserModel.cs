@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Totalview.Model
 {
-    class UserModel
+    public class UserModel
     {
-        string username { get; set; }
-        string password { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public int ID { get; set; }
     }
 }

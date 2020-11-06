@@ -18,6 +18,7 @@ namespace Totalview.View
         public MyStatePage()
         {
             InitializeComponent();
+            
         }
 
     }

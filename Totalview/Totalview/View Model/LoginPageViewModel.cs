@@ -6,6 +6,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using Totalview.View;
 using Xamarin.Forms;
+using Totalview.Model;
+using System.Net;
+using System.Collections.ObjectModel;
 
 namespace Totalview.View_Model
 {
@@ -14,13 +17,35 @@ namespace Totalview.View_Model
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; }
 
+        private UserModel userModel;
         public LoginPageViewModel()
         {
+            userModel = new UserModel();
             LoginCommand = new Command(async () =>
             {
-                await App.Current.MainPage.Navigation.PushAsync(new MyStatePage());
+                await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
                 NotifyPropertyChanged();
             });
+        }
+
+        public string Username
+        {
+            get { return userModel.Username; }
+            set
+            {
+                userModel.Username = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        public string Password
+        {
+            get { return userModel.Password; }
+            set
+            {
+                userModel.Password = value;
+                NotifyPropertyChanged();
+            }
         }
 
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")

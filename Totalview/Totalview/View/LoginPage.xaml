@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Totalview.View_Model"
-             x:Class="Totalview.LoginPage">
+             x:Class="Totalview.LoginPage"
+             NavigationPage.HasNavigationBar="False">
 
     <ContentPage.BindingContext>
         <local:LoginPageViewModel/>
@@ -10,20 +11,6 @@
 
     <StackLayout>
         <Image Source="totalview_logo_blue.png" HeightRequest="25" />
-
-        <!--<Image x:Name="totalview_logo_blue.png" VerticalOptions="Center">
-            <Image.Source>
-                <OnPlatform x:TypeArguments="ImageSource">
-                    <OnPlatform.iOS>
-                        <FileImageSource File="totalview_logo_blue.png"/>
-                    </OnPlatform.iOS>
-                    <OnPlatform.Android>
-                        <FileImageSource File="totalview_logo_blue.png"/>
-                    </OnPlatform.Android>
-                </OnPlatform>
-            </Image.Source>
-        </Image>-->
-
         <StackLayout VerticalOptions="CenterAndExpand"
                  Padding="30">
             <Label Text="Sign in"
@@ -36,22 +23,27 @@
             <Label Text="User name"
                Font="Bold, 20"/>
 
-            <Editor Placeholder="User name"/>
+            <Entry Placeholder="User name"
+                    Text="{Binding Username}"
+                   x:Name="usernameEntry"/>
 
             <Label Text="Password"
                Font="Bold, 20"/>
 
-            <Editor Placeholder="Password"/>
+            <Entry Placeholder="Password"
+                    Text="{Binding Password}"
+                   IsPassword="True"
+                  x:Name="paswordEntry"/>
 
             <Button Text="Next"
                 Command="{Binding LoginCommand}"
+                Clicked="OnLoginButtonClicked"
                 BackgroundColor="LimeGreen"
                 TextColor="White"/>
+
             <Label Text="Sign in as Demo User"
                    TextColor="LimeGreen"
                    HorizontalOptions="Center"/>
-
         </StackLayout>
     </StackLayout>
-
 </ContentPage>
