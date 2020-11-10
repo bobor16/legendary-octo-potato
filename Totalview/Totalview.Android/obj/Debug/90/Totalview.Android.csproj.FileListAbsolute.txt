@@ -54,6 +54,12 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.An
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\mscorlib.pdb
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\netstandard.dll
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\SQLite-net.dll
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\SQLitePCLRaw.core.dll
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\SQLitePCLRaw.lib.e_sqlite3.android.dll
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Buffers.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.pdb
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Core.dll
@@ -69,6 +75,7 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.An
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.IO.Compression.FileSystem.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.IO.Compression.FileSystem.pdb
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.IO.Compression.pdb
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Memory.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Net.Http.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Net.Http.pdb
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Numerics.dll
@@ -76,6 +83,7 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.An
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Numerics.Vectors.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Numerics.Vectors.pdb
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.pdb
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Runtime.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.pdb
