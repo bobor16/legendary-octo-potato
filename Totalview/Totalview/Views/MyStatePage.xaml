@@ -3,8 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Totalview.View.MyStatePage">
     <StackLayout Margin="20,35,20,20">
-        <Button Text="get from Database"
-                Clicked="OnButtonClicked" />
+        <Button Text="get from Database"/>
+        
         <ListView x:Name="listView">
             <ListView.ItemTemplate>
                 <DataTemplate>

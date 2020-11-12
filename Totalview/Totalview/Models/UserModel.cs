@@ -9,7 +9,6 @@ namespace Totalview.Models
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
     }
 }

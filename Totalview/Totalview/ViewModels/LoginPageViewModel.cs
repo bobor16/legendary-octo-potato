@@ -24,13 +24,6 @@ namespace Totalview.ViewModels
             });
         }
 
-        public void OnSubmit()
-        {
-            if (Username != "ffs" || Password != "123")
-            {
-                DisplayInvalidLoginPrompt();
-            }
-        }
         public string Username
         {
             get { return userModel.Username; }

@@ -15,21 +15,9 @@ namespace Totalview.View
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            listView.ItemsSource = await App.DataDummy.GetUserAsync();
-        }
-
         public MyStatePage()
         {
             InitializeComponent();
         }
-
-        async void OnButtonClicked(object sender, EventArgs e)
-        {
-            listView.ItemsSource = await App.DataDummy.GetUserAsync();
-        }
-
     }
 }
