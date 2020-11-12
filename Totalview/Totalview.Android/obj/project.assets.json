@@ -2182,24 +2182,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bruger\\.nuget\\packages\\": {},
+    "C:\\Users\\borga\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
+      "projectUniqueName": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
       "projectName": "Totalview.Android",
-      "projectPath": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
-      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\obj\\",
+      "projectPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
+      "packagesPath": "C:\\Users\\borga\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\borga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2213,8 +2213,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj": {
-              "projectPath": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj"
+            "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj": {
+              "projectPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj"
             }
           }
         }

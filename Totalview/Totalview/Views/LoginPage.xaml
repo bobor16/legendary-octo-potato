@@ -11,25 +11,25 @@
 
     <StackLayout>
         <Image Source="totalview_logo_blue.png" HeightRequest="25" />
-        
+
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
-            
+
             <Label Text="Sign in"
-               Grid.Row="1 "
                FontSize="Title"
                VerticalTextAlignment="Center"
-               TextColor="DarkBlue"
-               Padding="20"/>
+               TextColor="DarkBlue"/>
 
             <Label Text="User name"
-               Font="Bold, 20"/>
+                   TextColor="Black"
+               Font="Bold, 15"/>
 
             <Entry Placeholder="User name"
                Text="{Binding Username}"
                x:Name="usernameEntry"/>
 
             <Label Text="Password"
-               Font="Bold, 20"/>
+                   TextColor="Black"
+               Font="Bold, 15"/>
 
             <Entry Placeholder="Password"
                Text="{Binding Password}"
@@ -37,14 +37,15 @@
                x:Name="paswordEntry"/>
 
             <Button Text="Next"
+               x:Name="LoginButton"
                Command="{Binding LoginCommand}"
-               BackgroundColor="LimeGreen"
+               BackgroundColor="#008200"
                TextColor="White"/>
 
             <Label Text="Sign in as Demo User"
-               TextColor="LimeGreen"
+               TextColor="#008200"
                HorizontalOptions="Center"/>
-            
+
         </StackLayout>
     </StackLayout>
 </ContentPage>
