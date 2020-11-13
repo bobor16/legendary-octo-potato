@@ -28,11 +28,22 @@ namespace UICrossPlatformTest
         [Test]
         public void LoginPageTest()
         {
-            app.Tap(x => x.Button("Next"));
-            var result = app.WaitForElement(e => e.Marked("get from Database"));
-            Assert.IsFalse(result.Any());
-            app.Repl();
+            //Arrange
+            app.Tap("UsernameTest");
+            app.EnterText("Hellew");
+            app.DismissKeyboard();
 
+            app.Tap("PasswordTest");
+            app.EnterText("Test");
+            app.DismissKeyboard();
+
+            //Act
+            app.Tap("LoginButtonTest");
+            app.WaitForElement("TestLabel");
+
+            //Assert
+            bool result = app.Query(e => e.Marked("TestLabel")).Any();
+            Assert.IsTrue(result);
         }
     }
 }

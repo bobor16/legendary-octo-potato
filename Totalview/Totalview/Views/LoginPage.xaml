@@ -15,6 +15,7 @@
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
 
             <Label Text="Sign in"
+               AutomationId="SignInTest"
                FontSize="Title"
                VerticalTextAlignment="Center"
                TextColor="DarkBlue"/>
@@ -24,24 +25,22 @@
                Font="Bold, 15"/>
 
             <Entry Placeholder="User name"
-                   AutomationId="Username"
+               AutomationId="UsernameTest"
                Text="{Binding Username}"
                x:Name="usernameEntry"/>
 
             <Label Text="Password"
-                   TextColor="Black"
+               TextColor="Black"
                Font="Bold, 15"/>
 
             <Entry Placeholder="Password"
-                   AutomationId="Password"
+               AutomationId="PasswordTest"
                Text="{Binding Password}"
                IsPassword="True"
                x:Name="paswordEntry"/>
 
             <Button Text="Next"
-               x:Name="LoginButton"
-               
-               AutomationId="LoginButton"     
+               AutomationId="LoginButtonTest"     
                Command="{Binding LoginCommand}"
                BackgroundColor="#008200"
                TextColor="White"/>
