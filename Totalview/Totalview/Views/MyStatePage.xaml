@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Totalview.View.MyStatePage"
+             x:Name="MyStatePageTest"
              NavigationPage.HasBackButton="False">
     <StackLayout Margin="20,35,20,20">
-        <Button Text="get from Database"/>
+        <Button Text="test"/>
 
         <ListView x:Name="listView">
             <ListView.ItemTemplate>

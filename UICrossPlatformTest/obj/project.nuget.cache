@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "9WEELQhyAtAzpQKA2ttvN6Z71y2pvKBWoTA/Hgp7P4Dq3opFrs9K2BqqB9UKyB8rQocbwKmNIKV7zuxs/ZM1pQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\borga\\source\\repos\\bobor16\\UICrossPlatformTest\\UICrossPlatformTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\nunit3testadapter\\3.13.0\\nunit3testadapter.3.13.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.uitest\\3.0.5\\xamarin.uitest.3.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -24,6 +24,7 @@
                Font="Bold, 15"/>
 
             <Entry Placeholder="User name"
+                   AutomationId="Username"
                Text="{Binding Username}"
                x:Name="usernameEntry"/>
 
@@ -32,12 +33,15 @@
                Font="Bold, 15"/>
 
             <Entry Placeholder="Password"
+                   AutomationId="Password"
                Text="{Binding Password}"
                IsPassword="True"
                x:Name="paswordEntry"/>
 
             <Button Text="Next"
                x:Name="LoginButton"
+               
+               AutomationId="LoginButton"     
                Command="{Binding LoginCommand}"
                BackgroundColor="#008200"
                TextColor="White"/>
