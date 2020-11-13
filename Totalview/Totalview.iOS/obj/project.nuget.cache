@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "88RunWiih6nCOfUgc2RL5FKLIsdJcLShenuR6rtQdx/i/Ay7apRojXjJvAT0zqm+4zEuPkZIurCInpRY7T+rdw==",
+  "dgSpecHash": "RnQozggQoPwmBMQXlIXWZWlxOHoe8Q3fgiD43KH+8B7Ffe1vGHEWMbTdxxi+JjIWWJJcIZMvlKu8XnsfBvuKnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.iOS\\Totalview.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\borga\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
     "C:\\Users\\borga\\.nuget\\packages\\sqlite-net\\1.6.292\\sqlite-net.1.6.292.nupkg.sha512",
     "C:\\Users\\borga\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\borga\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",

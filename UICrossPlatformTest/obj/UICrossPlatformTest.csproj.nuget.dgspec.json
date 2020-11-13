@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[3.13.0, )"
             },
+            "Plugin.Toast": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Xamarin.UITest": {
               "target": "Package",
               "version": "[3.0.5, )"

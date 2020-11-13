@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "C+fopi4/YUw/SY50vV6kOkWm9fmOTULNYYsOSN78MaqTuO4swFX6VeIlhLDs9cbE8meWIq/cjKdFAm0g09cE2Q==",
+  "dgSpecHash": "PRIV25zdIHjm2sd4TXXfIDEnVSFNYKVDbuaHumKQVS90NxyAN+DEl9jDeJeb9mLdTlFuyeHYH7ZLXiZTosdmog==",
   "success": true,
   "projectFilePath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\UICrossPlatformTest\\UICrossPlatformTest.csproj",
   "expectedPackageFiles": [
     "C:\\Microsoft\\Xamarin\\NuGet\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\nunit3testadapter\\3.13.0\\nunit3testadapter.3.13.0.nupkg.sha512",
+    "C:\\Users\\borga\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.uitest\\3.0.5\\xamarin.uitest.3.0.5.nupkg.sha512"
   ],
   "logs": []

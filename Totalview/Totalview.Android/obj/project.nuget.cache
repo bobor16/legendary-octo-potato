@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "x9zK8Z5Qj6hPeYiXfhGSDiBPl3xocr0xikeIovCdWwLyoOis/c5Gs7iqfF5qR/a41CU+ittO/Hskyt0rmByjCA==",
+  "dgSpecHash": "/GgzBCpIfkdj+Dmhm4q+aSRjnY1NSI2bvcJwJ/PNxTC1XsS24s0d96qkofpdooO05QXqKMx+dYtWREn9IzVHIw==",
   "success": true,
   "projectFilePath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview.Android\\Totalview.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\borga\\.nuget\\packages\\plugin.toast\\2.2.0\\plugin.toast.2.2.0.nupkg.sha512",
     "C:\\Users\\borga\\.nuget\\packages\\sqlite-net\\1.6.292\\sqlite-net.1.6.292.nupkg.sha512",
     "C:\\Users\\borga\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
     "C:\\Users\\borga\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",

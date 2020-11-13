@@ -30,11 +30,17 @@ namespace UICrossPlatformTest
         {
             //Arrange
             app.Tap("UsernameTest");
+            //Test with username
             app.EnterText("Hellew");
+            //Test without username
+            //app.EnterText("");
             app.DismissKeyboard();
 
             app.Tap("PasswordTest");
+            //Test with password
             app.EnterText("Test");
+            //Test without password
+            //app.EnterText("");
             app.DismissKeyboard();
 
             //Act

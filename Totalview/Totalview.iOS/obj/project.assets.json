@@ -2,6 +2,17 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Toast.dll": {}
+        }
+      },
       "sqlite-net/1.6.292": {
         "type": "package"
       },
@@ -225,6 +236,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.Toast": "2.2.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.1141",
           "sqlite-net": "1.6.292",
@@ -239,6 +251,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Toast.dll": {}
+        }
+      },
       "sqlite-net/1.6.292": {
         "type": "package"
       },
@@ -462,6 +485,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.Toast": "2.2.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.1141",
           "sqlite-net": "1.6.292",
@@ -476,6 +500,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Toast.dll": {}
+        }
+      },
       "sqlite-net/1.6.292": {
         "type": "package"
       },
@@ -699,6 +734,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.Toast": "2.2.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.1141",
           "sqlite-net": "1.6.292",
@@ -713,6 +749,17 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.Toast.dll": {}
+        }
+      },
       "sqlite-net/1.6.292": {
         "type": "package"
       },
@@ -936,6 +983,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Plugin.Toast": "2.2.0",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.1141",
           "sqlite-net": "1.6.292",
@@ -951,6 +999,40 @@
     }
   },
   "libraries": {
+    "Plugin.Toast/2.2.0": {
+      "sha512": "PDq+r0P/WRu4YZimpwwfeLaTpHCVWlcw3MjJRC1be6Cg4ORfXL8YDz3HchnrRssRueUgP9ouwzLaQ4tLCD3Q4w==",
+      "type": "package",
+      "path": "plugin.toast/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid10/Plugin.Toast.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Toast.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Toast.dll",
+        "lib/MonoAndroid10/Plugin.Toast.dll.mdb",
+        "lib/MonoAndroid10/Plugin.Toast.pdb",
+        "lib/MonoAndroid10/Plugin.Toast.xml",
+        "lib/UAP10/Plugin.Toast.Abstractions.dll",
+        "lib/UAP10/Plugin.Toast.Abstractions.pdb",
+        "lib/UAP10/Plugin.Toast.dll",
+        "lib/UAP10/Plugin.Toast.pdb",
+        "lib/UAP10/Plugin.Toast.pri",
+        "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.dll",
+        "lib/Xamarin.iOS10/Plugin.Toast.dll.mdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.pdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.xml",
+        "lib/netstandard/Plugin.Toast.Abstractions.dll",
+        "lib/netstandard/Plugin.Toast.Abstractions.pdb",
+        "lib/netstandard/Plugin.Toast.deps.json",
+        "lib/netstandard/Plugin.Toast.dll",
+        "lib/netstandard/Plugin.Toast.pdb",
+        "plugin.toast.2.2.0.nupkg.sha512",
+        "plugin.toast.nuspec"
+      ]
+    },
     "sqlite-net/1.6.292": {
       "sha512": "/yXsrFYeUUYZiNELpicVG5fu0xJ0UdVgyZooqYws68NB9jLI5Ciievd96YOhtPdWY0O4F9l9XeE+446J/vnxiA==",
       "type": "package",
@@ -1460,6 +1542,7 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "Plugin.Toast >= 2.2.0",
       "Totalview >= 1.0.0",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.6.0.1141",
@@ -1508,6 +1591,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "Plugin.Toast": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.5.3.2, )"

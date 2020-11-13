@@ -932,3 +932,7 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.An
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\Plugin.Toast.Abstractions.dll
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\Plugin.Toast.Abstractions.pdb
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\Plugin.Toast.dll
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\android\assets\Plugin.Toast.dll.mdb

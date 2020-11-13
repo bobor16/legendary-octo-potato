@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Toast;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Totalview.Models;
@@ -19,8 +20,15 @@ namespace Totalview.ViewModels
             userModel = new UserModel();
             LoginCommand = new Command(async () =>
             {
-                await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
-                NotifyPropertyChanged();
+                if (!string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password))
+                {
+                    await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
+                    NotifyPropertyChanged();
+                }
+                else
+                {
+                    CrossToastPopUp.Current.ShowToastMessage("Invalid login cred...");
+                }
             });
         }
 

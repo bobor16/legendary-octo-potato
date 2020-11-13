@@ -20,6 +20,17 @@
           "build/net35/NUnit3TestAdapter.props": {}
         }
       },
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
+        }
+      },
       "Xamarin.UITest/3.0.5": {
         "type": "package",
         "compile": {
@@ -47,6 +58,17 @@
         "type": "package",
         "build": {
           "build/net35/NUnit3TestAdapter.props": {}
+        }
+      },
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
         }
       },
       "Xamarin.UITest/3.0.5": {
@@ -78,6 +100,17 @@
           "build/net35/NUnit3TestAdapter.props": {}
         }
       },
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
+        }
+      },
       "Xamarin.UITest/3.0.5": {
         "type": "package",
         "compile": {
@@ -105,6 +138,17 @@
         "type": "package",
         "build": {
           "build/net35/NUnit3TestAdapter.props": {}
+        }
+      },
+      "Plugin.Toast/2.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard/Plugin.Toast.Abstractions.dll": {},
+          "lib/netstandard/Plugin.Toast.dll": {}
         }
       },
       "Xamarin.UITest/3.0.5": {
@@ -170,6 +214,40 @@
         "nunit3testadapter.nuspec"
       ]
     },
+    "Plugin.Toast/2.2.0": {
+      "sha512": "PDq+r0P/WRu4YZimpwwfeLaTpHCVWlcw3MjJRC1be6Cg4ORfXL8YDz3HchnrRssRueUgP9ouwzLaQ4tLCD3Q4w==",
+      "type": "package",
+      "path": "plugin.toast/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/MonoAndroid10/Plugin.Toast.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Toast.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Toast.dll",
+        "lib/MonoAndroid10/Plugin.Toast.dll.mdb",
+        "lib/MonoAndroid10/Plugin.Toast.pdb",
+        "lib/MonoAndroid10/Plugin.Toast.xml",
+        "lib/UAP10/Plugin.Toast.Abstractions.dll",
+        "lib/UAP10/Plugin.Toast.Abstractions.pdb",
+        "lib/UAP10/Plugin.Toast.dll",
+        "lib/UAP10/Plugin.Toast.pdb",
+        "lib/UAP10/Plugin.Toast.pri",
+        "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Toast.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.dll",
+        "lib/Xamarin.iOS10/Plugin.Toast.dll.mdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.pdb",
+        "lib/Xamarin.iOS10/Plugin.Toast.xml",
+        "lib/netstandard/Plugin.Toast.Abstractions.dll",
+        "lib/netstandard/Plugin.Toast.Abstractions.pdb",
+        "lib/netstandard/Plugin.Toast.deps.json",
+        "lib/netstandard/Plugin.Toast.dll",
+        "lib/netstandard/Plugin.Toast.pdb",
+        "plugin.toast.2.2.0.nupkg.sha512",
+        "plugin.toast.nuspec"
+      ]
+    },
     "Xamarin.UITest/3.0.5": {
       "sha512": "PjbfZ4cjwUebAeY3sTIITM+7xGvZg8ZxFjmwx3gZfsmrOu6oqTXr6KdnneynnQpxOxwo6BR72JnewdAWipIf2Q==",
       "type": "package",
@@ -194,6 +272,7 @@
     ".NETFramework,Version=v4.6.1": [
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.13.0",
+      "Plugin.Toast >= 2.2.0",
       "Xamarin.UITest >= 3.0.5"
     ]
   },
@@ -242,6 +321,10 @@
           "NUnit3TestAdapter": {
             "target": "Package",
             "version": "[3.13.0, )"
+          },
+          "Plugin.Toast": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "Xamarin.UITest": {
             "target": "Package",
