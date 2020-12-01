@@ -1,36 +1,35 @@
-﻿using Plugin.Toast;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Totalview.Models;
-using Totalview.View;
 using Xamarin.Forms;
+using Totalview.Services;
+using Totalview.View;
 
 namespace Totalview.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
+
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; }
-        public Action DisplayInvalidLoginPrompt;
-
         private UserModel userModel;
+
         public LoginPageViewModel()
         {
             userModel = new UserModel();
-            LoginCommand = new Command(async () =>
-            {
-                if (!string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password))
-                {
-                    await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
-                    NotifyPropertyChanged();
-                }
-                else
-                {
-                    CrossToastPopUp.Current.ShowToastMessage("Invalid login cred...");
-                }
-            });
+            LoginCommand = new Command(Login);
+
         }
+
+        public async void Login()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
+            Console.WriteLine(ServerConnection.RefreshDataAsync());
+            //ServerConnection s = new ServerConnection();
+            //s.MakeConnection();
+        }
+
 
         public string Username
         {
@@ -56,6 +55,5 @@ namespace Totalview.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
     }
 }

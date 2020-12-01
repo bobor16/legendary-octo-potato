@@ -7,17 +7,8 @@
 
         <Button Text="get from Database"
                 AutomationId="MyStatePageTestButton"/>
-        
+
         <Label Text="Welcome!"
                AutomationId="TestLabel"/>
-
-        <ListView x:Name="listView">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <TextCell Text="{Binding Username}"
-                              Detail="{Binding Password}" />
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
     </StackLayout>
 </ContentPage>

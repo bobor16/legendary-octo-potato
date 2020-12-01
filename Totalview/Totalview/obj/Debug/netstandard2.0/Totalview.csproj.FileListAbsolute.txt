@@ -20,11 +20,12 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\bi
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Views\MyStatePage.xaml.g.cs
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\RefitStubs.g.cs
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.AssemblyInfoInputs.cache
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.AssemblyInfo.cs
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.csproj.CoreCompileInputs.cache
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\ref\Totalview.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.pdb
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.csprojAssemblyReference.cache
-C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.csproj.CoreCompileInputs.cache
-C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\XamlC.stamp

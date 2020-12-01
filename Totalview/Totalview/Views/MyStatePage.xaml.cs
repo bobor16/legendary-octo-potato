@@ -10,11 +10,8 @@ using Xamarin.Forms.Xaml;
 
 namespace Totalview.View
 {
-    public partial class MyStatePage : INotifyPropertyChanged
-
+    public partial class MyStatePage
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public MyStatePage()
         {
             InitializeComponent();

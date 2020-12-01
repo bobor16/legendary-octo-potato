@@ -26,6 +26,7 @@
 
             <Entry Placeholder="User name"
                AutomationId="UsernameTest"
+               Keyboard="Email"
                Text="{Binding Username}"
                x:Name="usernameEntry"/>
 

@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>Simulator</SelectedDevice>
     <DefaultDevice>iPhone 11 iOS 14.0</DefaultDevice>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
 </Project>
