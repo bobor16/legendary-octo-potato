@@ -27,7 +27,7 @@
             <Entry Placeholder="User name"
                AutomationId="UsernameTest"
                Keyboard="Email"
-               Text="{Binding Username}"
+               Text="{Binding Username, Mode=TwoWay}"
                x:Name="usernameEntry"/>
 
             <Label Text="Password"

@@ -14,28 +14,39 @@ namespace Totalview.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; }
+        public Command ClearEntry { get; }
         private UserModel userModel;
         private DataHandler d = new DataHandler();
+
         public LoginPageViewModel()
         {
             userModel = new UserModel();
             LoginCommand = new Command(Login);
-
-
+        }
+        private void WrongCredentials()
+        {
+            CrossToastPopUp.Current.ShowToastWarning("Wrong username or password, please try again");
         }
 
         public async void Login()
         {
             if (!Username.Equals(d.Username) || !Password.Equals(d.Password))
             {
-                CrossToastPopUp.Current.ShowToastWarning("Wrong username or password, please try again");
+                WrongCredentials();
+                clearEntry();
             }
             else
             {
                 await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
+                clearEntry();
+                NotifyPropertyChanged();
             }
         }
-
+        public void clearEntry()
+        {
+            Username = string.Empty;
+            Password = string.Empty;
+        }
 
         public string Username
         {
