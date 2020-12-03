@@ -5,6 +5,7 @@ using Totalview.Models;
 using Xamarin.Forms;
 using Totalview.Services;
 using Totalview.View;
+using Plugin.Toast;
 
 namespace Totalview.ViewModels
 {
@@ -14,20 +15,25 @@ namespace Totalview.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; }
         private UserModel userModel;
-
+        private DataHandler d = new DataHandler();
         public LoginPageViewModel()
         {
             userModel = new UserModel();
             LoginCommand = new Command(Login);
 
+
         }
 
         public async void Login()
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
-            Console.WriteLine(ServerConnection.RefreshDataAsync());
-            //ServerConnection s = new ServerConnection();
-            //s.MakeConnection();
+            if (!Username.Equals(d.Username) || !Password.Equals(d.Password))
+            {
+                CrossToastPopUp.Current.ShowToastWarning("Wrong username or password, please try again");
+            }
+            else
+            {
+                await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
+            }
         }
 
 
@@ -36,6 +42,7 @@ namespace Totalview.ViewModels
             get { return userModel.Username; }
             set
             {
+
                 userModel.Username = value;
                 NotifyPropertyChanged();
             }
