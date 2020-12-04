@@ -12,26 +12,6 @@ namespace Totalview.Services
 {
     class DataHandler
     {
-        private int userID;
-        public int UserID
-        {
-            get { return userID; }
-            set { userID = value; }
-        }
-
-        private string username;
-        public string Username
-        {
-            get { return username; }
-            set { username = value; }
-        }
-
-        private string password;
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
 
         public DataHandler()
         {
@@ -53,8 +33,31 @@ namespace Totalview.Services
                 username = Items[0].Username;
                 password = Items[0].Password;
 
-                Console.WriteLine(userID + " " + username + " Aaaaannd " + password);
+                //Console.WriteLine(userID + " " + username + " Aaaaannd " + password);
+                Console.WriteLine("Sucessfully connected to the most awesome website of all time!...");
             }
         }
+
+        private int userID;
+        public int UserID
+        {
+            get { return userID; }
+            set { userID = value; }
+        }
+
+        private string username;
+        public string Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+
+        private string password;
+        public string Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
+
     }
 }

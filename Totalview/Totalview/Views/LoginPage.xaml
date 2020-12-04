@@ -3,16 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Totalview.ViewModels"
              x:Class="Totalview.LoginPage"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             >
 
     <ContentPage.BindingContext>
         <local:LoginPageViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout>
-        <Image Source="totalview_logo_blue.png" HeightRequest="25" />
+    <StackLayout BackgroundColor="white">
+        <Image Source="totalview_logo_blue.png" HeightRequest="25" BackgroundColor="white"/>
 
-        <StackLayout VerticalOptions="CenterAndExpand" Padding="30">
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="30" BackgroundColor="white">
 
             <Label Text="Sign in"
                AutomationId="SignInTest"
@@ -25,6 +26,8 @@
                Font="Bold, 15"/>
 
             <Entry Placeholder="User name"
+               PlaceholderColor="LightGray"
+               TextColor="Black"
                AutomationId="UsernameTest"
                Keyboard="Email"
                Text="{Binding Username, Mode=TwoWay}"
@@ -35,6 +38,8 @@
                Font="Bold, 15"/>
 
             <Entry Placeholder="Password"
+               PlaceholderColor="LightGray"
+               TextColor="Black"
                AutomationId="PasswordTest"
                Text="{Binding Password}"
                IsPassword="True"

@@ -30,6 +30,7 @@ namespace Totalview.ViewModels
 
         public async void Login()
         {
+            
             if (!Username.Equals(d.Username) || !Password.Equals(d.Password))
             {
                 WrongCredentials();
