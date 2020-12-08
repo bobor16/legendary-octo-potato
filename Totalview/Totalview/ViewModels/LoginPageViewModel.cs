@@ -2,40 +2,68 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Totalview.Models;
-using Totalview.View;
 using Xamarin.Forms;
+using Totalview.Services;
+using Totalview.View;
+using Plugin.Toast;
+using Totalview.Views;
 
 namespace Totalview.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
+
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; }
-        public Action DisplayInvalidLoginPrompt;
-
+        public Command ClearEntry { get; }
+        public Command OpenServerSettings { get; }
         private UserModel userModel;
+        private DataHandler d = new DataHandler();
+
         public LoginPageViewModel()
         {
             userModel = new UserModel();
-            LoginCommand = new Command(async () =>
-            {
-                await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
-                NotifyPropertyChanged();
-            });
+            LoginCommand = new Command(Login);
+            OpenServerSettings = new Command(ServerSettings);
+        }
+        private void WrongCredentials()
+        {
+            CrossToastPopUp.Current.ShowToastWarning("Wrong username or password, please try again");
         }
 
-        public void OnSubmit()
+        public async void Login()
         {
-            if (Username != "ffs" || Password != "123")
+
+            if (!Username.Equals(d.Username) || !Password.Equals(d.Password))
             {
-                DisplayInvalidLoginPrompt();
+                WrongCredentials();
+                clearEntry();
+            }
+            else
+            {
+                await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
+                clearEntry();
+                NotifyPropertyChanged();
             }
         }
+        public void clearEntry()
+        {
+            Username = string.Empty;
+            Password = string.Empty;
+        }
+
+        public async void ServerSettings()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new ChooseServer());
+        }
+
+
         public string Username
         {
             get { return userModel.Username; }
             set
             {
+
                 userModel.Username = value;
                 NotifyPropertyChanged();
             }
@@ -55,6 +83,5 @@ namespace Totalview.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
     }
 }

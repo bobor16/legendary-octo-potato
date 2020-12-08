@@ -3,47 +3,78 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Totalview.ViewModels"
              x:Class="Totalview.LoginPage"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             >
 
     <ContentPage.BindingContext>
         <local:LoginPageViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout>
-        <Image Source="totalview_logo_blue.png" HeightRequest="25" />
-        <StackLayout VerticalOptions="CenterAndExpand"
-                 Padding="30">
+    <StackLayout BackgroundColor="white">
+        <Image Source="totalview_logo_blue.png" HeightRequest="25" BackgroundColor="white"/>
+
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="30" BackgroundColor="white">
+
             <Label Text="Sign in"
-               Grid.Row="1 "
+               AutomationId="SignInTest"
                FontSize="Title"
                VerticalTextAlignment="Center"
-               TextColor="DarkBlue"
-               Padding="20"/>
+               TextColor="DarkBlue"/>
 
             <Label Text="User name"
-               Font="Bold, 20"/>
+                   TextColor="Black"
+               Font="Bold, 15"/>
 
             <Entry Placeholder="User name"
-                    Text="{Binding Username}"
-                   x:Name="usernameEntry"/>
+               PlaceholderColor="LightGray"
+               TextColor="Black"
+               AutomationId="UsernameTest"
+               Keyboard="Email"
+               Text="{Binding Username, Mode=TwoWay}"
+               x:Name="usernameEntry"/>
 
             <Label Text="Password"
-               Font="Bold, 20"/>
+               TextColor="Black"
+               Font="Bold, 15"/>
 
             <Entry Placeholder="Password"
-                    Text="{Binding Password}"
-                   IsPassword="True"
-                  x:Name="paswordEntry"/>
+               PlaceholderColor="LightGray"
+               TextColor="Black"
+               AutomationId="PasswordTest"
+               Text="{Binding Password}"
+               IsPassword="True"
+               x:Name="paswordEntry"/>
 
             <Button Text="Next"
-                Command="{Binding LoginCommand}"
-                Clicked="OnLoginButtonClicked"
-                BackgroundColor="LimeGreen"
-                TextColor="White"/>
+               AutomationId="LoginButtonTest"     
+               Command="{Binding LoginCommand}"
+               BackgroundColor="#008200"
+               TextColor="White"/>
 
             <Label Text="Sign in as Demo User"
-                   TextColor="LimeGreen"
-                   HorizontalOptions="Center"/>
+               TextColor="#008200"
+               HorizontalOptions="Center"/>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" BackgroundColor="LightGray">
+            <ImageButton Source="icon_settings.png"
+                         BackgroundColor="LightGray"
+                         WidthRequest="35"
+                         HeightRequest="35"
+                         Margin="10"
+                         Command="{Binding OpenServerSettings}"/>
+
+            <Label Text="Connected to:"
+                   VerticalOptions="Center"
+                   MaxLines="1"
+                   TextColor="Gray"
+                   FontSize="Medium"/>
+
+            <Label Text="Domain"
+                   MaxLines="1"
+                   FontSize="Medium"
+                   VerticalOptions="Center"
+                   TextColor="Gray"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

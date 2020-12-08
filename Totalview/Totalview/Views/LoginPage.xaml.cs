@@ -10,22 +10,7 @@ namespace Totalview
 
         public LoginPage()
         {
-            BindingContext = new LoginPageViewModel();
             InitializeComponent();
         }
-
-        async public void OnLoginButtonClicked(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(usernameEntry.Text) && !string.IsNullOrWhiteSpace(paswordEntry.Text))
-            {
-                await App.DataDummy.SaveUserAsync(new Models.UserModel
-                {
-                    Username = usernameEntry.Text,
-                    Password = paswordEntry.Text
-                });
-                usernameEntry.Text = paswordEntry.Text = string.Empty;
-            }
-        }
-
     }
 }
