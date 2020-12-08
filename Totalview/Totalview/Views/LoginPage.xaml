@@ -56,5 +56,25 @@
                HorizontalOptions="Center"/>
 
         </StackLayout>
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" BackgroundColor="LightGray">
+            <ImageButton Source="icon_settings.png"
+                         BackgroundColor="LightGray"
+                         WidthRequest="35"
+                         HeightRequest="35"
+                         Margin="10"
+                         Command="{Binding OpenServerSettings}"/>
+
+            <Label Text="Connected to:"
+                   VerticalOptions="Center"
+                   MaxLines="1"
+                   TextColor="Gray"
+                   FontSize="Medium"/>
+
+            <Label Text="Domain"
+                   MaxLines="1"
+                   FontSize="Medium"
+                   VerticalOptions="Center"
+                   TextColor="Gray"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

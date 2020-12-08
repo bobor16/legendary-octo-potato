@@ -1174,3 +1174,4 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.An
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview.Android\obj\Debug\90\res\drawable\icon_settings.png

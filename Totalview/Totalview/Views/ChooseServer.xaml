@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Totalview.ViewModels"
+             x:Class="Totalview.Views.ChooseServer">
+                
+    <StackLayout BackgroundColor="White">
+        <Image Source="totalview_logo_blue.png" HeightRequest="25" BackgroundColor="white"/>
+
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="30" BackgroundColor="White">
+
+            <Label Text="Connect to server"
+               AutomationId="SignInTest"
+               FontSize="Title"
+               VerticalTextAlignment="Center"
+               TextColor="DarkBlue"/>
+
+            <Label Text="Server name"
+               TextColor="Black"
+               Font="Bold, 15"/>
+
+    <Entry 
+               TextColor="Black"
+               Text="{Binding URL, Mode=TwoWay}"
+               x:Name="serverNameEntry"/>
+
+    </StackLayout>
+
+    </StackLayout>
+</ContentPage>

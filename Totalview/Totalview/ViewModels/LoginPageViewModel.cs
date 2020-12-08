@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Totalview.Services;
 using Totalview.View;
 using Plugin.Toast;
+using Totalview.Views;
 
 namespace Totalview.ViewModels
 {
@@ -15,6 +16,7 @@ namespace Totalview.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; }
         public Command ClearEntry { get; }
+        public Command OpenServerSettings { get; }
         private UserModel userModel;
         private DataHandler d = new DataHandler();
 
@@ -22,6 +24,7 @@ namespace Totalview.ViewModels
         {
             userModel = new UserModel();
             LoginCommand = new Command(Login);
+            OpenServerSettings = new Command(ServerSettings);
         }
         private void WrongCredentials()
         {
@@ -30,7 +33,7 @@ namespace Totalview.ViewModels
 
         public async void Login()
         {
-            
+
             if (!Username.Equals(d.Username) || !Password.Equals(d.Password))
             {
                 WrongCredentials();
@@ -48,6 +51,12 @@ namespace Totalview.ViewModels
             Username = string.Empty;
             Password = string.Empty;
         }
+
+        public async void ServerSettings()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new ChooseServer());
+        }
+
 
         public string Username
         {
