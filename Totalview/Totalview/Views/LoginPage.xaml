@@ -30,7 +30,7 @@
                TextColor="Black"
                AutomationId="UsernameTest"
                Keyboard="Email"
-               Text="{Binding Username, Mode=TwoWay}"
+               Text="{Binding UsernameBinding, Mode=TwoWay}"
                x:Name="usernameEntry"/>
 
             <Label Text="Password"
@@ -41,7 +41,7 @@
                PlaceholderColor="LightGray"
                TextColor="Black"
                AutomationId="PasswordTest"
-               Text="{Binding Password}"
+               Text="{Binding PasswordBinding}"
                IsPassword="True"
                x:Name="paswordEntry"/>
 

@@ -1,63 +1,58 @@
 ﻿using Newtonsoft.Json;
-using Refit;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Totalview.Models;
-using Totalview.Services.Interfaces;
+using Totalview.ViewModels;
 
 namespace Totalview.Services
 {
-    class DataHandler
+    public class DataHandler
     {
+        private readonly string serverName = "https://totalview-96914.web.app/user.json";
+        private string content;
+        private LoginPageViewModel viewModel;
 
-        public DataHandler()
+        public DataHandler(LoginPageViewModel input)
         {
-            GetDataAsync();
+            //getDataAsync();
+            viewModel = input;
         }
 
-        public async Task GetDataAsync()
+        public async Task getDataAsync()
         {
-            var uri = new Uri("https://totalview-96914.web.app/user.json");
+            var uri = new Uri(serverName);
             HttpClient myClient = new HttpClient();
             var response = await myClient.GetAsync(uri);
-
             if (response.IsSuccessStatusCode)
             {
-                var content = await response.Content.ReadAsStringAsync();
-                var Items = JsonConvert.DeserializeObject<List<UserModel>>(content);
+                Debug.WriteLine("Sucessfully connected to the most awesome website of all time!... :D");
 
-                userID = Items[0].ID;
-                username = Items[0].Username;
-                password = Items[0].Password;
+                content = await response.Content.ReadAsStringAsync();
+                var desenteralizedObject = JsonConvert.DeserializeObject<List<UserModel>>(content);
 
-                //Console.WriteLine(userID + " " + username + " Aaaaannd " + password);
-                Console.WriteLine("Sucessfully connected to the most awesome website of all time!...");
+
+                if (desenteralizedObject != null)
+                {
+                    for (int i = 0; i < desenteralizedObject.Count; i++)
+                    {
+                        Debug.WriteLine("Username: " + desenteralizedObject[i].username + " Password: " + desenteralizedObject[i].password);
+                    }
+                    foreach (var item in desenteralizedObject)
+                    {
+                        Root list = viewModel.root;
+                        list.UserList.Add(new UserModel
+                        {
+                            password = item.password,
+                            username = item.username
+                        });
+                    }
+                    Debug.WriteLine("break");
+                }
             }
         }
-
-        private int userID;
-        public int UserID
-        {
-            get { return userID; }
-            set { userID = value; }
-        }
-
-        private string username;
-        public string Username
-        {
-            get { return username; }
-            set { username = value; }
-        }
-
-        private string password;
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
-
     }
 }
