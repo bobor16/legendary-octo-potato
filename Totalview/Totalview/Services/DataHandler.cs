@@ -12,10 +12,10 @@ namespace Totalview.Services
 {
     class DataHandler
     {
-
+        public List<UserModel> userList = new List<UserModel>();
         public DataHandler()
         {
-            GetDataAsync();
+            
         }
 
         public async Task GetDataAsync()
@@ -29,12 +29,7 @@ namespace Totalview.Services
                 var content = await response.Content.ReadAsStringAsync();
                 var Items = JsonConvert.DeserializeObject<List<UserModel>>(content);
 
-                userID = Items[0].ID;
-                username = Items[0].Username;
-                password = Items[0].Password;
-
-                //Console.WriteLine(userID + " " + username + " Aaaaannd " + password);
-                Console.WriteLine("Sucessfully connected to the most awesome website of all time!...");
+                Console.WriteLine("Connected to server and retrieved data...");
             }
         }
 

@@ -34,17 +34,17 @@ namespace Totalview.ViewModels
         public async void Login()
         {
 
-            if (!Username.Equals(d.Username) || !Password.Equals(d.Password))
-            {
-                WrongCredentials();
-                clearEntry();
-            }
-            else
-            {
+            //if (!Username.Equals(d.Username) || !Password.Equals(d.Password))
+            //{
+              //  WrongCredentials();
+                //clearEntry();
+            //}
+            //else
+            //{
                 await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
-                clearEntry();
+              //  clearEntry();
                 NotifyPropertyChanged();
-            }
+            //}
         }
         public void clearEntry()
         {
