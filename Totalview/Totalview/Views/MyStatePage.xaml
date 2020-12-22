@@ -1,14 +1,129 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Totalview.ViewModels"
              x:Class="Totalview.View.MyStatePage"
-             NavigationPage.HasBackButton="False">
-    <StackLayout Margin="20,35,20,20">
+             NavigationPage.HasBackButton="False"
+             >
 
-        <Button Text="get from Database"
-                AutomationId="MyStatePageTestButton"/>
+    <ContentPage.BindingContext>
+        <local:MyStatePageViewModel/>
+    </ContentPage.BindingContext>
 
-        <Label Text="Welcome!"
-               AutomationId="TestLabel"/>
+    <StackLayout BackgroundColor="White">
+
+        <StackLayout Padding="30" BackgroundColor="White">
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="White">
+
+                <Label Text="Name of user"
+                       TextColor="Black"
+                       Font="Bold, 15"
+                       HorizontalOptions="StartAndExpand"
+                       />
+
+                <Label Text="{Binding State}"
+                       TextColor="Black"
+                       Font="Bold, 15"
+                       HorizontalOptions="StartAndExpand"
+                       />
+
+                <Image Source="totalview_logo_blue.png" 
+                       HeightRequest="25" 
+                       BackgroundColor="white"
+                       HorizontalOptions="EndAndExpand"
+                       />
+
+            </StackLayout>
+
+            <Label Text="Change State"
+                   BackgroundColor="Gray"
+                   TextColor="White"
+                   HorizontalOptions="Fill"
+                   Margin="0, 20, 0, 0"
+                   />
+
+            <StackLayout Orientation="Horizontal">
+
+                <BoxView BackgroundColor="Black" WidthRequest="5" />
+
+                <Button Text="Not Registered"
+                    ContentLayout="Left, 10"
+                    AutomationId="StateTest"     
+                    Command="{Binding NrStateCommand}"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                />
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal">
+
+                <BoxView BackgroundColor="Green" WidthRequest="5" />
+
+                <Button Text="In"
+                    AutomationId="StateTest"     
+                    Command="{Binding InStateCommand}"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                />
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal">
+
+                <BoxView BackgroundColor="DarkGray" WidthRequest="5" />
+
+                <Button Text="Home"
+                    AutomationId="StateTest"     
+                    Command="{Binding HomeStateCommand}"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                />
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal">
+
+                <BoxView BackgroundColor="Orange" WidthRequest="5" />
+
+                <Button Text="Out"
+                    AutomationId="StateTest"     
+                    Command="{Binding OutStateCommand}"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                />
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+
+            <StackLayout Orientation="Horizontal">
+
+                <BoxView BackgroundColor="Firebrick" WidthRequest="5" />
+
+                <Button Text="Busy"
+                    AutomationId="StateTest"     
+                    Command="{Binding BusyStateCommand}"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                />
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+
+        </StackLayout>
     </StackLayout>
 </ContentPage>

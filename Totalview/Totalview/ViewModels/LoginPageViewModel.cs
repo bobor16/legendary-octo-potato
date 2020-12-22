@@ -40,7 +40,6 @@ namespace Totalview.ViewModels
             DataHandler d = new DataHandler(this);
             await d.getDataAsync();
 
-            Debug.WriteLine("Hey rasmus!");
             if (!string.IsNullOrEmpty(UsernameBinding) || !string.IsNullOrEmpty(PasswordBinding))
             {
                 for (int i = 0; i < root.UserList.Count; i++)
