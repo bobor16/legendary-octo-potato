@@ -19,7 +19,6 @@ namespace Totalview.ViewModels
         public Command LoginCommand { get; }
         public Command ClearEntry { get; }
         public Command OpenServerSettings { get; }
-        private UserModel u = new UserModel();
         public Root root { get; set; }
         private bool success;
 
