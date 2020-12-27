@@ -16,7 +16,7 @@
 
             <StackLayout Orientation="Horizontal" BackgroundColor="White">
 
-                <Label Text="Name of user"
+                <Label Text="{Binding CurrentName}"
                        TextColor="Black"
                        Font="Bold, 15"
                        HorizontalOptions="StartAndExpand"

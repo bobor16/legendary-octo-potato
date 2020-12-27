@@ -12,6 +12,8 @@ namespace Totalview.Models
 
         [JsonProperty(PropertyName = "username")]
         public string username { get; set; }
+        public string currentUser { get; set; }
+
     }
     public class Root
     {

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
+using Totalview.Models;
 using Xamarin.Forms;
 
 namespace Totalview.ViewModels
@@ -12,8 +13,10 @@ namespace Totalview.ViewModels
     {
 
         private String state = "Default State";
-
         public event PropertyChangedEventHandler PropertyChanged;
+        public UserModel _userModel = new UserModel();
+
+        private String currentName;
 
         public ICommand NrStateCommand { get; }
         public ICommand InStateCommand { get; }
@@ -28,6 +31,24 @@ namespace Totalview.ViewModels
             HomeStateCommand = new Command(HomeState);
             OutStateCommand = new Command(OutState);
             BusyStateCommand = new Command(BusyState);
+            Console.WriteLine("Kom så! " + CurrentUserModel.CurrentUserName);
+            loadInfo();
+        }
+
+        public string CurrentName
+        {
+            get { return currentName; }
+            set
+            {
+                currentName = value;
+                NotifyPropertyChanged();
+            }
+        }
+
+        public void loadInfo()
+        {
+            currentName = CurrentUserModel.CurrentUserName;
+            NotifyPropertyChanged(nameof(CurrentName));
         }
 
         public String State

@@ -20,6 +20,8 @@ namespace Totalview.ViewModels
         public Command ClearEntry { get; }
         public Command OpenServerSettings { get; }
         public Root root { get; set; }
+
+        public UserModel _userModel = new UserModel();
         private bool success;
 
 
@@ -28,6 +30,8 @@ namespace Totalview.ViewModels
             LoginCommand = new Command(Login);
             OpenServerSettings = new Command(ServerSettings);
             root = new Root();
+            
+
         }
         private void WrongCredentialsMessage()
         {
@@ -47,6 +51,7 @@ namespace Totalview.ViewModels
                     if (UsernameBinding.Equals(root.UserList[i].username) || PasswordBinding.Equals(root.UserList[i].password))
                     {
                         Debug.WriteLine("The username is here somewhere!");
+                        CurrentUserModel.CurrentUserName = UsernameBinding;
                         clearEntry();
                         await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
                         NotifyPropertyChanged();
