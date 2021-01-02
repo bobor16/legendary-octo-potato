@@ -3,6 +3,7 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Totalview.Models;
@@ -12,15 +13,19 @@ namespace Totalview.Services
 {
     public class DataHandler
     {
-        private readonly string serverName = "https://totalview-96914.web.app/user.json";
+        private readonly string serverName = "https://totalview-96914.web.app/users.json";
         private string content;
-        private LoginPageViewModel viewModel;
 
+        private LoginPageViewModel viewModel;
+        private Root root { get; set; }
         public DataHandler(LoginPageViewModel input)
         {
-            //getDataAsync();
             viewModel = input;
+            root = new Root();
+
         }
+
+
 
         public async Task getDataAsync()
         {
@@ -32,25 +37,26 @@ namespace Totalview.Services
                 Debug.WriteLine("Sucessfully connected to the most awesome website of all time!... :D");
 
                 content = await response.Content.ReadAsStringAsync();
-                var desenteralizedObject = JsonConvert.DeserializeObject<List<UserModel>>(content);
 
+                Dictionary<String, UserModel> desenteralizedObject = JsonConvert.DeserializeObject<Dictionary<String, UserModel>>(content);
 
                 if (desenteralizedObject != null)
                 {
                     for (int i = 0; i < desenteralizedObject.Count; i++)
                     {
-                        Debug.WriteLine("Username: " + desenteralizedObject[i].username + " Password: " + desenteralizedObject[i].password);
+                        Debug.WriteLine("Username: " + desenteralizedObject.Values + " Password: " + desenteralizedObject.Keys);
                     }
-                    foreach (var item in desenteralizedObject)
+                    foreach (var item in desenteralizedObject.Values)
                     {
                         Root list = viewModel.root;
                         list.UserList.Add(new UserModel
                         {
+                            id = item.id,
                             password = item.password,
+                            state = item.state,
                             username = item.username
                         });
-                    }
-                    Debug.WriteLine("break");
+                    };
                 }
             }
         }

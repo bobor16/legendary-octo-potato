@@ -8,20 +8,16 @@ using Totalview.View;
 using Plugin.Toast;
 using Totalview.Views;
 using System.Diagnostics;
-using System.Collections.Generic;
 
 namespace Totalview.ViewModels
 {
     public class LoginPageViewModel : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; }
         public Command ClearEntry { get; }
         public Command OpenServerSettings { get; }
         public Root root { get; set; }
-
-        public UserModel _userModel = new UserModel();
         private bool success;
 
 
@@ -30,8 +26,6 @@ namespace Totalview.ViewModels
             LoginCommand = new Command(Login);
             OpenServerSettings = new Command(ServerSettings);
             root = new Root();
-            
-
         }
         private void WrongCredentialsMessage()
         {
@@ -48,10 +42,13 @@ namespace Totalview.ViewModels
             {
                 for (int i = 0; i < root.UserList.Count; i++)
                 {
-                    if (UsernameBinding.Equals(root.UserList[i].username) || PasswordBinding.Equals(root.UserList[i].password))
+                    if (UsernameBinding.Equals(root.UserList[i].username) && PasswordBinding.Equals(root.UserList[i].password))
                     {
                         Debug.WriteLine("The username is here somewhere!");
                         CurrentUserModel.CurrentUserName = UsernameBinding;
+                        CurrentUserModel.CurrentState = root.UserList[i].state;
+                        CurrentUserModel.CurrentId = root.UserList[i].id;
+                        CurrentUserModel.CurrentPassword = PasswordBinding;
                         clearEntry();
                         await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
                         NotifyPropertyChanged();
@@ -70,7 +67,6 @@ namespace Totalview.ViewModels
                 clearEntry();
                 WrongCredentialsMessage();
                 NotifyPropertyChanged();
-
             }
         }
 

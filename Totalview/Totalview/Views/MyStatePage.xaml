@@ -22,7 +22,7 @@
                        HorizontalOptions="StartAndExpand"
                        />
 
-                <Label Text="{Binding State}"
+                <Label Text="{Binding State, Mode=TwoWay}"
                        TextColor="Black"
                        Font="Bold, 15"
                        HorizontalOptions="StartAndExpand"

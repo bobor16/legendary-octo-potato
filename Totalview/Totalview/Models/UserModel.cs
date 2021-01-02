@@ -1,30 +1,38 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Totalview.Models
 {
     public class UserModel
     {
-        //[JsonProperty(PropertyName = "ID")]
-        //public string ID { get; set; }
+        [JsonProperty(PropertyName = "id")]
+        public string id { get; set; }
+
         [JsonProperty(PropertyName = "password")]
         public string password { get; set; }
 
+        [JsonProperty(PropertyName = "state")]
+        public string state { get; set; }
+
         [JsonProperty(PropertyName = "username")]
         public string username { get; set; }
-        public string currentUser { get; set; }
 
     }
+
     public class Root
     {
         public Root()
         {
             UserList = new List<UserModel>();
+            keys = new Dictionary<string, UserModel>();
         }
 
-        [JsonProperty(PropertyName = "user")]
+        [JsonProperty(PropertyName = "users")]
         public List<UserModel> UserList { get; set; }
-        public int count { get; set; }
+
+        public Dictionary<String, UserModel> keys { get; set; }
+
     }
 }
 

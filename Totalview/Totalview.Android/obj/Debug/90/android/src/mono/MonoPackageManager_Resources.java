@@ -3,8 +3,11 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Totalview.Android.dll" comes first in this list. */
 		"Totalview.Android.dll",
+		"Firebase.dll",
 		"FormsViewGroup.dll",
+		"LiteDB.dll",
 		"Microsoft.Bcl.AsyncInterfaces.dll",
+		"MvvmHelpers.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.Toast.Abstractions.dll",
 		"Plugin.Toast.dll",
@@ -14,6 +17,7 @@ public class MonoPackageManager_Resources {
 		"SQLitePCLRaw.core.dll",
 		"SQLitePCLRaw.lib.e_sqlite3.android.dll",
 		"SQLitePCLRaw.provider.e_sqlite3.dll",
+		"System.Reactive.dll",
 		"System.Text.Encodings.Web.dll",
 		"System.Text.Json.dll",
 		"Totalview.dll",

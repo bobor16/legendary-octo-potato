@@ -277,24 +277,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bruger\\.nuget\\packages\\": {},
+    "C:\\Users\\borga\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\UICrossPlatformTest\\UICrossPlatformTest.csproj",
+      "projectUniqueName": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\UICrossPlatformTest\\UICrossPlatformTest.csproj",
       "projectName": "UICrossPlatformTest",
-      "projectPath": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\UICrossPlatformTest\\UICrossPlatformTest.csproj",
-      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\UICrossPlatformTest\\obj\\",
+      "projectPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\UICrossPlatformTest\\UICrossPlatformTest.csproj",
+      "packagesPath": "C:\\Users\\borga\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\UICrossPlatformTest\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\borga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
