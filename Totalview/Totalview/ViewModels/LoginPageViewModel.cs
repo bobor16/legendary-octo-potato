@@ -11,18 +11,18 @@ using Totalview.Views;
 namespace Totalview.ViewModels
 {
     /// <summary>
-    /// 
+    /// LoginPageViewModel authenticates the user and furthermore sets bindings and commands
+    /// to the LoginPageView.
     /// </summary>
     public class LoginPageViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         public Command LoginCommand { get; }
-        public Command ClearEntry { get; }
         public Command OpenServerSettings { get; }
         public Root root { get; set; }
         private bool success;
-        private string _username;
-        private string _password;
+        private string username;
+        private string password;
 
         public LoginPageViewModel()
         {
@@ -31,8 +31,7 @@ namespace Totalview.ViewModels
             root = new Root();
         }
         /*
-         * 
-         Display 
+         Display an error if user fails to authenticated.
          */
         private void WrongCredentialsMessage()
         {
@@ -100,28 +99,33 @@ namespace Totalview.ViewModels
         }
 
         /*
-        Sets the binding for the username and password         
+        Sets the binding for the username.          
          */
         public string UsernameBinding
         {
-            get { return _username; }
+            get { return username; }
             set
             {
-                _username = value;
+                username = value;
                 NotifyPropertyChanged();
             }
         }
 
+        /*
+         Sets the binding for the password.
+         */
         public string PasswordBinding
         {
-            get { return _password; }
+            get { return password; }
             set
             {
-                _password = value;
+                password = value;
                 NotifyPropertyChanged();
             }
         }
-
+        /*
+         Method for notifyring the view, that it has changed.
+         */
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

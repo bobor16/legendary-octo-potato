@@ -4,9 +4,7 @@ using System.Collections.Generic;
 
 namespace Totalview.Models
 {
-    /// <summary>
-    /// 
-    /// </summary>
+
     public class UserModel
     {
         [JsonProperty(PropertyName = "id")]

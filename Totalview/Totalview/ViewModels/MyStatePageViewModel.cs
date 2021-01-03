@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Windows.Input;
 using Totalview.Models;
 using Totalview.Services;
@@ -13,13 +9,11 @@ using Xamarin.Forms;
 namespace Totalview.ViewModels
 {
     /// <summary>
-    /// 
+    /// MyStatePageViewModel hold the logic to bind and command the MyStatePage.
     /// </summary>
     public class MyStatePageViewModel : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
-        public UserModel _userModel = new UserModel();
         private String currentName, currentState, currentId, currentPassword;
         public ICommand NrStateCommand { get; }
         public ICommand InStateCommand { get; }
@@ -34,23 +28,32 @@ namespace Totalview.ViewModels
             HomeStateCommand = new Command(HomeState);
             OutStateCommand = new Command(OutState);
             BusyStateCommand = new Command(BusyState);
-            loadInfo();
+            LoadCurrentUserInfo();
         }
 
-        public void loadInfo()
+        /*
+         Sets the current user to the user found in the json object in the LoginPageViewModel.
+        The method is invoked as soon as the constructor is.
+         */
+        public void LoadCurrentUserInfo()
         {
             currentName = CurrentUserModel.CurrentUserName;
             currentState = CurrentUserModel.CurrentState;
             currentId = CurrentUserModel.CurrentId;
             currentPassword = CurrentUserModel.CurrentPassword;
         }
-        public async void update(string username, string state, string id, string password)
+
+        /*
+         Updates the user state, the username, id, 
+         */
+        public async void UpdateState(string username, string state, string id, string password)
         {
             FirebaseHelper f = new FirebaseHelper();
-            await f.UpdatePerson(username, currentState, id, password);
+            await f.UpdateDatabase(username, state, id, password);
+
         }
 
-        public string CurrentId
+        public String CurrentId
         {
             get { return currentId; }
             set
@@ -60,7 +63,7 @@ namespace Totalview.ViewModels
             }
         }
 
-        public string CurrentPassword
+        public String CurrentPassword
         {
             get { return currentPassword; }
             set
@@ -69,8 +72,7 @@ namespace Totalview.ViewModels
                 NotifyPropertyChanged();
             }
         }
-
-        public string CurrentName
+        public String CurrentName
         {
             get { return currentName; }
             set
@@ -79,11 +81,7 @@ namespace Totalview.ViewModels
                 NotifyPropertyChanged();
             }
         }
-
-
-
-
-        public String State
+        public String CurrentState
         {
             get { return currentState; }
             set
@@ -92,41 +90,54 @@ namespace Totalview.ViewModels
                 NotifyPropertyChanged();
             }
         }
-
+        /*
+         Binds the states to the MyStatePage via commands
+         */
         public void NrState()
         {
             currentState = "Not Registered";
-            update(CurrentName, "Not Registered", CurrentId, CurrentPassword);
-            NotifyPropertyChanged(nameof(State));
+            UpdateState(CurrentName, CurrentState, CurrentId, CurrentPassword);
+            NotifyPropertyChanged(nameof(CurrentState));
         }
+        /*
+         Binds the states to the MyStatePage via commands
+         */
         public void InState()
         {
             currentState = "In";
-            update(CurrentName, "In", CurrentId, CurrentPassword);
-            NotifyPropertyChanged(nameof(State));
+            UpdateState(CurrentName, CurrentState, CurrentId, CurrentPassword);
+            NotifyPropertyChanged(nameof(CurrentState));
         }
-
+        /*
+         Binds the states to the MyStatePage via commands
+         */
         public void HomeState()
         {
             currentState = "Home";
-            update(CurrentName, "Home", CurrentId, CurrentPassword);
-            NotifyPropertyChanged(nameof(State));
+            UpdateState(CurrentName, CurrentState, CurrentId, CurrentPassword);
+            NotifyPropertyChanged(nameof(CurrentState));
         }
-
+        /*
+         Binds the states to the MyStatePage via commands
+         */
         public void OutState()
         {
             currentState = "Out";
-            update(CurrentName, "Out", CurrentId, CurrentPassword);
-            NotifyPropertyChanged(nameof(State));
+            UpdateState(CurrentName, CurrentState, CurrentId, CurrentPassword);
+            NotifyPropertyChanged(nameof(CurrentState));
         }
-
+        /*
+         Binds the states to the MyStatePage via commands
+         */
         public void BusyState()
         {
             currentState = "Busy";
-            update(CurrentName, "Busy", CurrentId, CurrentPassword);
-            NotifyPropertyChanged(nameof(State));
+            UpdateState(CurrentName, CurrentState, CurrentId, CurrentPassword);
+            NotifyPropertyChanged(nameof(CurrentState));
         }
-
+        /*
+         Method for notifyring the view, that it has changed.
+         */
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

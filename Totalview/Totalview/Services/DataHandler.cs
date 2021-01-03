@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Totalview.Models;
@@ -11,6 +8,9 @@ using Totalview.ViewModels;
 
 namespace Totalview.Services
 {
+    /// <summary>
+    /// DataHandler class handles all the communication between the client and server.
+    /// </summary>
     public class DataHandler
     {
         private readonly string serverName = "https://totalview-96914.web.app/users.json";
@@ -21,7 +21,11 @@ namespace Totalview.Services
         {
             viewModel = input;
         }
-
+        /*
+         Creates a http client that returns a response code between 200 - 299,
+        The response json file provided by the server is the deserialized into a 
+        dictionary and placed into the usermodel.
+         */
         public async Task getDataAsync()
         {
             var uri = new Uri(serverName);
@@ -30,6 +34,10 @@ namespace Totalview.Services
             if (response.IsSuccessStatusCode)
             {
                 content = await response.Content.ReadAsStringAsync();
+                /*
+                 The user information is located in the usermodel node which is located in the root node.
+                Each user created in the firebase in placed in a node with a usermodel node.
+                 */
                 Dictionary<String, UserModel> desenteralizedObject = JsonConvert.DeserializeObject<Dictionary<String, UserModel>>(content);
 
                 if (desenteralizedObject != null)

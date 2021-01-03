@@ -23,7 +23,7 @@
                        AutomationId="LabelTest"
                        />
 
-                <Label Text="{Binding State, Mode=TwoWay}"
+                <Label Text="{Binding CurrentState, Mode=TwoWay}"
                        TextColor="Black"
                        Font="Bold, 15"
                        HorizontalOptions="StartAndExpand"

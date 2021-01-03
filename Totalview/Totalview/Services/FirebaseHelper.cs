@@ -10,10 +10,10 @@ namespace Totalview.Services
 {
     public class FirebaseHelper
     {
-        private FirebaseClient client = new FirebaseClient("https://totalview-96914.firebaseio.com/");
+        private readonly FirebaseClient client = new FirebaseClient("https://totalview-96914.firebaseio.com/");
         private readonly string FirebaseChild = "users";
 
-        public async Task UpdatePerson(string username, string state, string id, string password)
+        public async Task UpdateDatabase(string username, string state, string id, string password)
         {
             try
             {
