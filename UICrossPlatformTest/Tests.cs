@@ -7,6 +7,7 @@ using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 
+
 namespace UICrossPlatformTest
 {
     [TestFixture(Platform.Android)]
@@ -15,7 +16,6 @@ namespace UICrossPlatformTest
     {
         IApp app;
         Platform platform;
-        private bool ifLoggedIn;
 
         public Tests(Platform platform)
         {
@@ -31,39 +31,40 @@ namespace UICrossPlatformTest
         [Test]
         public void LoginPageTest()
         {
-            if (!ifLoggedIn)
-            {
-                app.Tap("UsernameTest");
-                app.EnterText("jacksparrow");
-                app.DismissKeyboard();
+            // Arrange
+            app.Tap("UsernameTest");
+            app.EnterText("jacksparrow");
+            app.DismissKeyboard();
 
-                app.Screenshot("First screenshot");
+            app.Screenshot("First screenshot");
 
-                app.Tap("PasswordTest");
-                app.EnterText("test");
-                app.DismissKeyboard();
+            app.Tap("PasswordTest");
+            app.EnterText("test");
+            app.DismissKeyboard();
 
-                app.Screenshot("Second screenshot");
+            app.Screenshot("Second screenshot");
+            // Act
+            app.Tap("LoginButtonTest");
 
-                app.Tap("LoginButtonTest");
-                app.WaitForElement("LabelTest");
+            app.Screenshot("Third screenshot");
 
-                app.Screenshot("Third screenshot");
+            // Assert. If it succeeds, it arranges for the next test.
 
-                bool result = app.Query(e => e.Text("jacksparrow")).Any();
-                Assert.IsTrue(result);
+            bool result = app.Query(e => e.Text("jacksparrow")).Any();
+            Assert.IsTrue(result);
 
-
-                ifLoggedIn = true;
-            }
-
+            // Act
             app.Tap("NRTest");
+
             app.WaitForElement("ChangeLabelTest");
             app.Screenshot("Fourth screenshot");
 
+            // Assert
             AppResult[] state = app.Query(e => e.Marked("Not Registered"));
             int count = state.Count();
             Assert.That(count == 2);
+
+
         }
     }
 }

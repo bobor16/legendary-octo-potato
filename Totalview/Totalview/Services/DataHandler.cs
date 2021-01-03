@@ -15,8 +15,8 @@ namespace Totalview.Services
     {
         private readonly string serverName = "https://totalview-96914.web.app/users.json";
         private string content;
-
         private LoginPageViewModel viewModel;
+
         public DataHandler(LoginPageViewModel input)
         {
             viewModel = input;
