@@ -7,10 +7,12 @@ using Totalview.Services;
 using Totalview.View;
 using Plugin.Toast;
 using Totalview.Views;
-using System.Diagnostics;
 
 namespace Totalview.ViewModels
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class LoginPageViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -19,7 +21,8 @@ namespace Totalview.ViewModels
         public Command OpenServerSettings { get; }
         public Root root { get; set; }
         private bool success;
-
+        private string _username;
+        private string _password;
 
         public LoginPageViewModel()
         {
@@ -27,11 +30,22 @@ namespace Totalview.ViewModels
             OpenServerSettings = new Command(ServerSettings);
             root = new Root();
         }
+        /*
+         * 
+         Display 
+         */
         private void WrongCredentialsMessage()
         {
             CrossToastPopUp.Current.ShowToastWarning("Wrong username or password, please try again");
         }
 
+        /*
+        Ensures DataHandler has gathered the data for a user to login by awaiting the getDataAsync(),
+        secondly there will be controlled if the user has entered artibrary text into the entryfields
+        (e.g. username or password). The user is then authenticated by comparing the entered text is 
+        equivilant to the username and password gathered from the DataHandler().
+        Lastly, if authenticated, the view is replaced with MyStatePage().
+         */
         public async void Login()
         {
             success = false;
@@ -44,7 +58,6 @@ namespace Totalview.ViewModels
                 {
                     if (UsernameBinding.Equals(root.UserList[i].username) && PasswordBinding.Equals(root.UserList[i].password))
                     {
-                        Debug.WriteLine("The username is here somewhere!");
                         CurrentUserModel.CurrentUserName = UsernameBinding;
                         CurrentUserModel.CurrentState = root.UserList[i].state;
                         CurrentUserModel.CurrentId = root.UserList[i].id;
@@ -55,6 +68,7 @@ namespace Totalview.ViewModels
                         success = true;
                     }
                 }
+
                 if (!success)
                 {
                     clearEntry();
@@ -62,6 +76,7 @@ namespace Totalview.ViewModels
                     NotifyPropertyChanged();
                 }
             }
+
             else
             {
                 clearEntry();
@@ -76,11 +91,17 @@ namespace Totalview.ViewModels
             PasswordBinding = string.Empty;
         }
 
+        /*
+         Opens a new the ChooseServerPage
+         */
         public async void ServerSettings()
         {
             await Application.Current.MainPage.Navigation.PushAsync(new ChooseServer());
         }
-        private string _username;
+
+        /*
+        Sets the binding for the username and password         
+         */
         public string UsernameBinding
         {
             get { return _username; }
@@ -90,7 +111,7 @@ namespace Totalview.ViewModels
                 NotifyPropertyChanged();
             }
         }
-        private string _password;
+
         public string PasswordBinding
         {
             get { return _password; }

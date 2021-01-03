@@ -221,8 +221,8 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\bi
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\bin\Debug\System.Xml.XmlSerializer.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\bin\Debug\System.Xml.XPath.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\bin\Debug\System.Xml.XPath.XDocument.dll
-C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\obj\Debug\UICrossPlatformTest.csprojAssemblyReference.cache
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\obj\Debug\UICrossPlatformTest.csproj.CoreCompileInputs.cache
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\obj\Debug\UICrossPlatformTest.csproj.CopyComplete
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\obj\Debug\UICrossPlatformTest.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\obj\Debug\UICrossPlatformTest.pdb
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\UICrossPlatformTest\obj\Debug\UICrossPlatformTest.csprojAssemblyReference.cache

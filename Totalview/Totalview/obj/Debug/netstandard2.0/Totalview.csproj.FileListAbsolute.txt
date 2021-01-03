@@ -19,7 +19,6 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\bi
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\bin\Debug\netstandard2.0\Totalview.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\bin\Debug\netstandard2.0\ref\Totalview.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\bin\Debug\netstandard2.0\Totalview.pdb
-C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.csprojAssemblyReference.cache
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Views\ChooseServer.xaml.g.cs
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
@@ -32,3 +31,4 @@ C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\ob
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\ref\Totalview.dll
 C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.pdb
+C:\Users\borga\source\repos\bobor16\legendary-octo-potato\Totalview\Totalview\obj\Debug\netstandard2.0\Totalview.csprojAssemblyReference.cache

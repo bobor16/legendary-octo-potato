@@ -1,12 +1,10 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Totalview.Models;
-using Totalview.ViewModels;
 
 namespace Totalview.Services
 {
@@ -14,21 +12,6 @@ namespace Totalview.Services
     {
         private FirebaseClient client = new FirebaseClient("https://totalview-96914.firebaseio.com/");
         private readonly string FirebaseChild = "users";
-
-
-
-        public async Task AddPerson(string personId, string name, string password, string state)
-        {
-            await client
-              .Child(FirebaseChild)
-              .PostAsync(new UserModel()
-              {
-                  id = personId,
-                  username = name,
-                  password = password,
-                  state = state
-              });
-        }
 
         public async Task UpdatePerson(string username, string state, string id, string password)
         {

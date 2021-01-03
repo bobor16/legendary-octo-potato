@@ -13,6 +13,7 @@ namespace UICrossPlatformTest
                 return ConfigureApp
                     .Android
                     .InstalledApp("com.companyname.totalview")
+                    .EnableLocalScreenshots()
                     .StartApp();
             }
 

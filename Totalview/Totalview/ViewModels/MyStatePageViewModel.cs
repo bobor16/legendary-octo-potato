@@ -12,6 +12,9 @@ using Xamarin.Forms;
 
 namespace Totalview.ViewModels
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class MyStatePageViewModel : INotifyPropertyChanged
     {
 
@@ -34,15 +37,17 @@ namespace Totalview.ViewModels
             loadInfo();
         }
 
+        public void loadInfo()
+        {
+            currentName = CurrentUserModel.CurrentUserName;
+            currentState = CurrentUserModel.CurrentState;
+            currentId = CurrentUserModel.CurrentId;
+            currentPassword = CurrentUserModel.CurrentPassword;
+        }
         public async void update(string username, string state, string id, string password)
         {
             FirebaseHelper f = new FirebaseHelper();
-            //await f.AddPerson("4", "skipper", "123456", state);
-            //Debug.WriteLine("Person added");
-
             await f.UpdatePerson(username, currentState, id, password);
-            Debug.WriteLine("person updated!");
-            //loadInfo();
         }
 
         public string CurrentId
@@ -76,24 +81,7 @@ namespace Totalview.ViewModels
         }
 
 
-        public void loadInfo()
-        {
-            currentName = CurrentUserModel.CurrentUserName;
-            currentState = CurrentUserModel.CurrentState;
-            currentId = CurrentUserModel.CurrentId;
-            currentPassword = CurrentUserModel.CurrentPassword;
 
-            NotifyPropertyChanged(nameof(CurrentName));
-            NotifyPropertyChanged(nameof(State));
-            NotifyPropertyChanged(nameof(CurrentPassword));
-            NotifyPropertyChanged(nameof(CurrentId));
-
-            Debug.WriteLine("Username: \n"
-                + currentName + "\nPassword: "
-                + CurrentPassword + "\nid: "
-                + CurrentId + "\nState: "
-                + State);
-        }
 
         public String State
         {
@@ -111,7 +99,6 @@ namespace Totalview.ViewModels
             update(CurrentName, "Not Registered", CurrentId, CurrentPassword);
             NotifyPropertyChanged(nameof(State));
         }
-
         public void InState()
         {
             currentState = "In";

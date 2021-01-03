@@ -17,15 +17,10 @@ namespace Totalview.Services
         private string content;
 
         private LoginPageViewModel viewModel;
-        private Root root { get; set; }
         public DataHandler(LoginPageViewModel input)
         {
             viewModel = input;
-            root = new Root();
-
         }
-
-
 
         public async Task getDataAsync()
         {
@@ -34,18 +29,11 @@ namespace Totalview.Services
             var response = await myClient.GetAsync(uri);
             if (response.IsSuccessStatusCode)
             {
-                Debug.WriteLine("Sucessfully connected to the most awesome website of all time!... :D");
-
                 content = await response.Content.ReadAsStringAsync();
-
                 Dictionary<String, UserModel> desenteralizedObject = JsonConvert.DeserializeObject<Dictionary<String, UserModel>>(content);
 
                 if (desenteralizedObject != null)
                 {
-                    for (int i = 0; i < desenteralizedObject.Count; i++)
-                    {
-                        Debug.WriteLine("Username: " + desenteralizedObject.Values + " Password: " + desenteralizedObject.Keys);
-                    }
                     foreach (var item in desenteralizedObject.Values)
                     {
                         Root list = viewModel.root;

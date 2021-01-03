@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Totalview.ViewModels"
              x:Class="Totalview.View.MyStatePage"
-             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False"
              >
 
     <ContentPage.BindingContext>
@@ -20,12 +20,14 @@
                        TextColor="Black"
                        Font="Bold, 15"
                        HorizontalOptions="StartAndExpand"
+                       AutomationId="LabelTest"
                        />
 
                 <Label Text="{Binding State, Mode=TwoWay}"
                        TextColor="Black"
                        Font="Bold, 15"
                        HorizontalOptions="StartAndExpand"
+                       AutomationId="ChangeLabelTest"
                        />
 
                 <Image Source="totalview_logo_blue.png" 
@@ -49,12 +51,12 @@
 
                 <Button Text="Not Registered"
                     ContentLayout="Left, 10"
-                    AutomationId="StateTest"     
+                    AutomationId="NRTest"     
                     Command="{Binding NrStateCommand}"
                     BackgroundColor="White"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
-                />
+                        />
 
             </StackLayout>
 
@@ -65,7 +67,7 @@
                 <BoxView BackgroundColor="Green" WidthRequest="5" />
 
                 <Button Text="In"
-                    AutomationId="StateTest"     
+                    AutomationId="InTest"     
                     Command="{Binding InStateCommand}"
                     BackgroundColor="White"
                     TextColor="Black"
@@ -81,7 +83,7 @@
                 <BoxView BackgroundColor="DarkGray" WidthRequest="5" />
 
                 <Button Text="Home"
-                    AutomationId="StateTest"     
+                    AutomationId="HomeTest"     
                     Command="{Binding HomeStateCommand}"
                     BackgroundColor="White"
                     TextColor="Black"
@@ -97,7 +99,7 @@
                 <BoxView BackgroundColor="Orange" WidthRequest="5" />
 
                 <Button Text="Out"
-                    AutomationId="StateTest"     
+                    AutomationId="OutTest"     
                     Command="{Binding OutStateCommand}"
                     BackgroundColor="White"
                     TextColor="Black"
@@ -113,17 +115,14 @@
                 <BoxView BackgroundColor="Firebrick" WidthRequest="5" />
 
                 <Button Text="Busy"
-                    AutomationId="StateTest"     
+                    AutomationId="BusyTest"     
                     Command="{Binding BusyStateCommand}"
                     BackgroundColor="White"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
                 />
-
             </StackLayout>
-
             <BoxView BackgroundColor="Gray" HeightRequest="1" />
-
         </StackLayout>
     </StackLayout>
 </ContentPage>
