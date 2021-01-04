@@ -2288,23 +2288,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\borga\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Bruger\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj",
       "projectName": "Totalview",
-      "projectPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj",
-      "packagesPath": "C:\\Users\\borga\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\borga\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\obj\\",
+      "projectPath": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\Totalview.csproj",
+      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bruger\\source\\repos\\bobor16\\legendary-octo-potato\\Totalview\\Totalview\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\borga\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2317,7 +2319,6 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -2329,7 +2330,6 @@
     },
     "frameworks": {
       "netstandard2.0": {
-        "targetAlias": "netstandard2.0",
         "dependencies": {
           "FirebaseDatabase.net": {
             "target": "Package",
@@ -2384,7 +2384,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

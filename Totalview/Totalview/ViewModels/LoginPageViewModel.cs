@@ -7,6 +7,8 @@ using Totalview.Services;
 using Totalview.View;
 using Plugin.Toast;
 using Totalview.Views;
+using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Totalview.ViewModels
 {
@@ -31,19 +33,18 @@ namespace Totalview.ViewModels
             root = new Root();
         }
         /*
-         Display an error if user fails to authenticated.
+         Display an error if user fails to be authenticated.
          */
         private void WrongCredentialsMessage()
         {
             CrossToastPopUp.Current.ShowToastWarning("Wrong username or password, please try again");
+            clearEntry();
         }
 
         /*
         Ensures DataHandler has gathered the data for a user to login by awaiting the getDataAsync(),
         secondly there will be controlled if the user has entered artibrary text into the entryfields
-        (e.g. username or password). The user is then authenticated by comparing the entered text is 
-        equivilant to the username and password gathered from the DataHandler().
-        Lastly, if authenticated, the view is replaced with MyStatePage().
+        (e.g. username or password).
          */
         public async void Login()
         {
@@ -53,34 +54,50 @@ namespace Totalview.ViewModels
 
             if (!string.IsNullOrEmpty(UsernameBinding) || !string.IsNullOrEmpty(PasswordBinding))
             {
-                for (int i = 0; i < root.UserList.Count; i++)
+                await Authenticate();
+
+                if (!success)
                 {
-                    if (UsernameBinding.Equals(root.UserList[i].username) && PasswordBinding.Equals(root.UserList[i].password))
+                    WrongCredentialsMessage();
+                    NotifyPropertyChanged();
+                }
+            } 
+            
+            else
+            {
+                WrongCredentialsMessage();
+                NotifyPropertyChanged();
+            }
+        }
+
+         /*
+         The user is authenticated by comparing the entered text 
+         to the username and password gathered from the DataHandler, by accessing the UserList from
+         the Root class.
+         Lastly, if authenticated, the view is replaced with MyStatePage().
+         */
+        public async Task Authenticate()
+        {
+            for (int i = 0; i < root.UserList.Count; i++)
+            {
+                if (UsernameBinding.Equals(root.UserList[i].username) && PasswordBinding.Equals(root.UserList[i].password))
+                {
+                    try
                     {
                         CurrentUserModel.CurrentUserName = UsernameBinding;
                         CurrentUserModel.CurrentState = root.UserList[i].state;
                         CurrentUserModel.CurrentId = root.UserList[i].id;
                         CurrentUserModel.CurrentPassword = PasswordBinding;
-                        clearEntry();
                         await Application.Current.MainPage.Navigation.PushAsync(new MyStatePage());
+                        clearEntry();
                         NotifyPropertyChanged();
                         success = true;
                     }
+                    catch (Exception e)
+                    {
+                        Debug.WriteLine($"Error: {e}");
+                    }
                 }
-
-                if (!success)
-                {
-                    clearEntry();
-                    WrongCredentialsMessage();
-                    NotifyPropertyChanged();
-                }
-            }
-
-            else
-            {
-                clearEntry();
-                WrongCredentialsMessage();
-                NotifyPropertyChanged();
             }
         }
 

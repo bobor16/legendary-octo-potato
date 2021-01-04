@@ -13,6 +13,8 @@
     <StackLayout BackgroundColor="white">
         <Image Source="totalview_logo_blue.png" HeightRequest="25" BackgroundColor="white"/>
 
+        <ScrollView>
+            
         <StackLayout VerticalOptions="CenterAndExpand" Padding="30" BackgroundColor="white">
 
             <Label Text="Sign in"
@@ -56,7 +58,10 @@
                HorizontalOptions="Center"/>
 
         </StackLayout>
-        <StackLayout Orientation="Horizontal" VerticalOptions="End" BackgroundColor="LightGray">
+
+        </ScrollView>
+            
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" BackgroundColor="LightGray">
             <ImageButton Source="icon_settings.png"
                          BackgroundColor="LightGray"
                          WidthRequest="35"
@@ -76,5 +81,7 @@
                    VerticalOptions="Center"
                    TextColor="Gray"/>
         </StackLayout>
+           
+        
     </StackLayout>
 </ContentPage>

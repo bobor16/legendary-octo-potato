@@ -23,7 +23,7 @@
                        AutomationId="LabelTest"
                        />
 
-                <Label Text="{Binding CurrentState, Mode=TwoWay}"
+                <Label Text="{Binding CurrentState}"
                        TextColor="Black"
                        Font="Bold, 15"
                        HorizontalOptions="StartAndExpand"
@@ -45,11 +45,16 @@
                    Margin="0, 20, 0, 0"
                    />
 
-            <StackLayout Orientation="Horizontal">
 
-                <BoxView BackgroundColor="Black" WidthRequest="5" />
+            <ScrollView>
 
-                <Button Text="Not Registered"
+                <StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <BoxView BackgroundColor="Black" WidthRequest="5" />
+
+                    <Button Text="Not Registered"
                     ContentLayout="Left, 10"
                     AutomationId="NRTest"     
                     Command="{Binding NrStateCommand}"
@@ -58,15 +63,15 @@
                     HorizontalOptions="FillAndExpand"
                         />
 
-            </StackLayout>
+                </StackLayout>
 
-            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+                <BoxView BackgroundColor="Gray" HeightRequest="1" />
 
-            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
 
-                <BoxView BackgroundColor="Green" WidthRequest="5" />
+                    <BoxView BackgroundColor="Green" WidthRequest="5" />
 
-                <Button Text="In"
+                    <Button Text="In"
                     AutomationId="InTest"     
                     Command="{Binding InStateCommand}"
                     BackgroundColor="White"
@@ -74,15 +79,15 @@
                     HorizontalOptions="FillAndExpand"
                 />
 
-            </StackLayout>
+                </StackLayout>
 
-            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+                <BoxView BackgroundColor="Gray" HeightRequest="1" />
 
-            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
 
-                <BoxView BackgroundColor="DarkGray" WidthRequest="5" />
+                    <BoxView BackgroundColor="DarkGray" WidthRequest="5" />
 
-                <Button Text="Home"
+                    <Button Text="Home"
                     AutomationId="HomeTest"     
                     Command="{Binding HomeStateCommand}"
                     BackgroundColor="White"
@@ -90,15 +95,15 @@
                     HorizontalOptions="FillAndExpand"
                 />
 
-            </StackLayout>
+                </StackLayout>
 
-            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+                <BoxView BackgroundColor="Gray" HeightRequest="1" />
 
-            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
 
-                <BoxView BackgroundColor="Orange" WidthRequest="5" />
+                    <BoxView BackgroundColor="Orange" WidthRequest="5" />
 
-                <Button Text="Out"
+                    <Button Text="Out"
                     AutomationId="OutTest"     
                     Command="{Binding OutStateCommand}"
                     BackgroundColor="White"
@@ -106,23 +111,27 @@
                     HorizontalOptions="FillAndExpand"
                 />
 
-            </StackLayout>
+                </StackLayout>
 
-            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+                <BoxView BackgroundColor="Gray" HeightRequest="1" />
 
-            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
 
-                <BoxView BackgroundColor="Firebrick" WidthRequest="5" />
+                    <BoxView BackgroundColor="Firebrick" WidthRequest="5" />
 
-                <Button Text="Busy"
+                    <Button Text="Busy"
                     AutomationId="BusyTest"     
                     Command="{Binding BusyStateCommand}"
                     BackgroundColor="White"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
                 />
-            </StackLayout>
-            <BoxView BackgroundColor="Gray" HeightRequest="1" />
+                </StackLayout>
+                <BoxView BackgroundColor="Gray" HeightRequest="1" />
+                </StackLayout>
+
+            </ScrollView>
+
         </StackLayout>
     </StackLayout>
 </ContentPage>
